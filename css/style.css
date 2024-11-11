@@ -303,6 +303,11 @@ h6 {
     align-items: center;
 }
 
+.contentClub {
+    font-size: 18px;
+    line-height: 32px;
+}
+
 .content {
     font-size: 18px;
 }
