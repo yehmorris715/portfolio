@@ -47,6 +47,10 @@ html {
     background-color: #ffd277;
 }
 
+.logo {
+    width: 30px;
+}
+
 .active {
     font-weight: 600;
 }
@@ -203,8 +207,7 @@ html {
 }
 
 .profile-name {
-    margin-top
-    : 30px;
+    margin-top: 30px;
     font-weight: bold;
 }
 
@@ -249,7 +252,7 @@ html {
 }
 
 .footer {
-    height: 50px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,7 +544,7 @@ h6 {
 
 /* 介面設計 */
 .smallTitleHr {
-    width: 65vw;
+    width: 75vw;
     max-width: 1100px;
     padding-bottom: 20px;
 }
@@ -786,12 +789,12 @@ h6 {
     .appIcon {
         height: 50px;
     }
-    
+
     .threeicon {
         height: 50px;
         padding-right: 15px;
     }
-    
+
     .icon {
         height: 35px;
         padding-right: 15px;
@@ -820,5 +823,41 @@ h6 {
 
     .projectImgSwift {
         width: 33%;
+    }
+}
+
+.title {
+    position: relative;
+    text-align: center; /* 讓 h2 置中 */
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.btnBack {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* 垂直置中 */
+    z-index: 1; /* 確保按鈕在 h2 之下，不會與 h2 重疊 */
+    padding-left: 15%;
+    cursor: pointer;
+}
+
+.backImg {
+    width: 35px;
+}
+
+.pageTitle {
+    margin: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 450px) {
+    .btnBack {
+        padding-left: 3%;
+    }
+
+    .backImg {
+        width: 28px;
     }
 }
