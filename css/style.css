@@ -90,7 +90,7 @@ html {
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     h5 {
@@ -100,6 +100,10 @@ html {
 
     .introduceP {
         font-size: 15px;
+    }
+
+    .aboutmeTitle {
+        font-size: 22px;
     }
 }
 
