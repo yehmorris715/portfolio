@@ -84,13 +84,32 @@ html {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     h2 {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     h3 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+        color: #373737;
+    }
+
+    .introduceP {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    h2 {
         font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
     }
 
     h5 {
@@ -98,6 +117,12 @@ html {
         color: #373737;
     }
 
+    .introduceP {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
     .content {
         font-size: 14px;
     }
@@ -475,6 +500,7 @@ h6 {
     /* 設置比蒙版更高的層級 */
     text-shadow: #000000b7 2px 2px;
     /* 增加文字陰影效果 */
+    font-size: 28px;
 }
 
 .linkBoxPhoto {
@@ -828,7 +854,7 @@ h6 {
 
 .title {
     position: relative;
-    text-align: center; /* 讓 h2 置中 */
+    text-align: center;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -837,8 +863,8 @@ h6 {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%); /* 垂直置中 */
-    z-index: 1; /* 確保按鈕在 h2 之下，不會與 h2 重疊 */
+    transform: translateY(-50%);
+    z-index: 1;
     padding-left: 15%;
     cursor: pointer;
 }
@@ -854,7 +880,7 @@ h6 {
 
 @media (max-width: 450px) {
     .btnBack {
-        padding-left: 3%;
+        padding-left: 1%;
     }
 
     .backImg {
