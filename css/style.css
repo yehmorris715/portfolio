@@ -183,7 +183,7 @@ html {
 
 @media (min-height: 846px) {
     .homebigbox {
-        min-height: calc(100vh - 104px);
+        min-height: calc(100vh - 103px);
     }
 }
 
