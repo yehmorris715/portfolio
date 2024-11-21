@@ -15,7 +15,7 @@ html {
     margin: 0;
     height: 100%;
     font-family: "Noto Sans TC", sans-serif;
-    background-color: #0e0632;
+    background-color: rgba(14, 16, 15);
 } */
 
 /* 深色漸層 */
@@ -24,7 +24,7 @@ html {
     margin: 0;
     height: 100%;
     font-family: "Noto Sans TC", sans-serif;
-    background: linear-gradient(120deg, #09213b, #0c0f2e, #230b4c, #0a113c);
+    background: linear-gradient(120deg, #131a21, #34495e);
     background-size: 400% 1000%;
     animation: gradientFlow 4s ease-in-out infinite;
 } */
@@ -98,10 +98,6 @@ html {
         color: #373737;
     }
 
-    .introduceP {
-        font-size: 15px;
-    }
-
     .aboutmeTitle {
         font-size: 22px;
     }
@@ -120,10 +116,6 @@ html {
         font-size: 18px;
         color: #373737;
     }
-
-    .introduceP {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -133,10 +125,6 @@ html {
 
     .uiLinkBox {
         font-size: 1rem;
-    }
-
-    .homesmallbox {
-        min-width: 90vw;
     }
 
     .profile-image {
@@ -198,62 +186,18 @@ html {
     justify-content: center;
     align-items: center;
     height: auto;
-    /* height: calc(100vh - 105px);
-    background-color: #f1f1f1; */
     padding: 20px;
     box-sizing: border-box;
-}
-
-.homesmallbox {
-    width: 70vw;
-    max-width: 1344px;
-    min-height: 700px;
-    /* 保持固定的最小高度 */
-    background-color: #fff;
-    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-image {
-    width: 40vw;
-    max-width: 350px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.profile-line {
-    width: 55vw;
-    max-width: 500px;
-    height: 2px;
-    background-color: #000;
-    margin: 0px auto;
-    /* 調整線條與其他元素的間距 */
-}
-
-.profile-name {
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-.profileEnglishName {
-    margin-bottom: 20px;
 }
 
 .profile-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    /* 調整按鈕間距 */
+    gap: 18px;
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
 }
 
 .btnstyle {
@@ -261,12 +205,11 @@ html {
     border: solid #FFCB66;
     color: #362525;
     background-color: #fff;
-    transition: 0.5s;
 }
 
 .btnstyle:hover {
     background-color: #FFCB66;
-    transform: scale(1.1);
+    border: solid white;
     transition: 0.5s;
 }
 
@@ -275,17 +218,13 @@ html {
     font-size: 16px;
 }
 
-.introduce {
-    font-size: 16px;
-    margin: 0px 30px;
-}
-
 .footer {
     height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f3f3f3;
+    flex-shrink: 0;
 }
 
 h2 {
@@ -392,10 +331,6 @@ h6 {
     justify-content: center;
 }
 
-/* .softwareTitle {
-    color: #ffa55c;
-} */
-
 .work {
     font-size: large;
     font-weight: 500;
@@ -469,15 +404,12 @@ h6 {
 
 .colbox:hover .overlay {
     opacity: 0.7;
-    /* 當滑鼠懸停時，使蒙版顯示 */
     transition: opacity 0.3s;
 }
 
 .colbox:hover .linkBoxPhoto {
     transform: scale(1.1);
-    /* 放大圖片 */
     transition: 0.5s;
-    /* 動畫時間 */
 }
 
 .linkbox {
@@ -499,11 +431,8 @@ h6 {
 
 .workLinkBox {
     position: relative;
-    /* 確保文字內容在蒙版層之上 */
     z-index: 10;
-    /* 設置比蒙版更高的層級 */
     text-shadow: #000000b7 2px 2px;
-    /* 增加文字陰影效果 */
     font-size: 28px;
 }
 
@@ -525,9 +454,7 @@ h6 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* 半透明黑色 */
     opacity: 0;
-    /* 初始狀態隱藏 */
     z-index: 5;
     transition: opacity 0.3s;
     font-size: 20px;
@@ -565,7 +492,6 @@ h6 {
 
     .colbox {
         width: calc(50% - 30px);
-        /* 每個項目佔一半寬度，減少間距 */
         max-width: 550px;
         min-height: 350px;
         margin: 15px;
@@ -623,24 +549,18 @@ h6 {
 
 .workInColbox:hover .overlay {
     opacity: 0.7;
-    /* 當滑鼠懸停時，使蒙版顯示 */
     transition: opacity 0.3s;
 }
 
 .workInColbox:hover .linkBoxPhoto {
     transform: scale(1.1);
-    /* 放大圖片 */
     transition: 0.5s;
-    /* 動畫時間 */
 }
 
 .workInLinkBox {
     position: relative;
-    /* 確保文字內容在蒙版層之上 */
     z-index: 10;
-    /* 設置比蒙版更高的層級 */
     text-shadow: #000000b7 2px 2px;
-    /* 增加文字陰影效果 */
     font-size: 24px;
 }
 
@@ -666,12 +586,10 @@ h6 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        /* align-items: flex-start; */
     }
 
     .workInColbox {
         width: calc(50% - 30px);
-        /* 每個項目佔一半寬度，減少間距 */
         max-width: 550px;
         min-height: 350px;
         margin: 15px;
@@ -692,20 +610,15 @@ h6 {
 
 .imgInLinkBox {
     position: relative;
-    /* 確保文字內容在蒙版層之上 */
     z-index: 10;
-    /* 設置比蒙版更高的層級 */
     text-shadow: #000000b7 2px 2px;
-    /* 增加文字陰影效果 */
     font-size: 18px;
     text-align: right;
 }
 
 .workInColbox:hover .imgBoxPhoto {
     transform: scale(1.05);
-    /* 放大圖片 */
     transition: 0.5s;
-    /* 動畫時間 */
 }
 
 .projectVideo {
@@ -841,7 +754,6 @@ h6 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        /* align-items: flex-start; */
     }
 
     .workInColbox {

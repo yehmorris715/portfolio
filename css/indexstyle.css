@@ -1,0 +1,283 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.homebigbox {
+    flex: 1; /* 讓內容區塊填充剩餘空間 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-name {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.indexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexInside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexText h1 {
+    display: inline;
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+
+.indexText h2 {
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.indexText p {
+    padding-left: 20px;
+    display: inline;
+    font-size: 20px;
+}
+
+.profile-image {
+    width: 45vw;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-line {
+    width: 60vw;
+    max-width: 550px;
+    height: 2px;
+    background-color: #000;
+    color: rgba(255, 252, 225);
+    margin: 0px auto;
+}
+
+.indexText h1 span,
+.indexText h2 span {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-mask {
+    position: relative;
+    width: 100%;
+    /* 遮罩的寬度和圖片保持一致 */
+    max-width: 500px;
+    /* 和圖片的 max-width 一致 */
+    height: auto;
+    overflow: hidden;
+    /* 關鍵：超出範圍的內容將被隱藏 */
+}
+
+.profile-image {
+    position: relative;
+    transform: translateY(100%);
+    /* 初始位置：完全位於遮罩下方 */
+}
+
+@media (max-width: 991px) {
+    .indexRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 390px) {
+    .profile-image {
+        width: 60vw;
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-line {
+        width: 70vw;
+        max-width: 600px;
+        height: 2px;
+        background-color: #000;
+        margin: 0px auto;
+    }
+
+    .indexText h1 {
+        padding-top: 30px;
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .indexText h2 {
+        font-size: 27px;
+    }
+
+    .indexText p {
+        padding-left: 0px;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 391px) and (max-width: 639px) {
+    .profile-image {
+        width: 60vw;
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-line {
+        width: 70vw;
+        max-width: 600px;
+        height: 2px;
+        background-color: #000;
+        margin: 0px auto;
+    }
+
+    .indexText h1 {
+        padding-top: 30px;
+        font-size: 42px;
+    }
+
+    .indexText h2 {
+        font-size: 32px;
+    }
+
+    .indexText p {
+        padding-left: 0px;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+    .profile-image {
+        width: 55vw;
+        max-width: 550px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-line {
+        width: 65vw;
+        max-width: 550px;
+        height: 2px;
+        background-color: #000;
+        margin: 0px auto;
+    }
+
+    .indexText h1 {
+        padding-top: 50px;
+        font-size: 48px;
+    }
+
+    .indexText h2 {
+        font-size: 36px;
+    }
+
+    .indexText p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .profile-image {
+        width: 50vw;
+        max-width: 550px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-line {
+        width: 65vw;
+        max-width: 600px;
+        height: 2px;
+        background-color: #000;
+        margin: 0px auto;
+    }
+
+    .indexText h1 {
+        padding-top: 50px;
+        font-size: 52px;
+    }
+
+    .indexText h2 {
+        font-size: 40px;
+    }
+
+    .indexText p {
+        font-size: 17.5px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+    .profile-image {
+        width: 40vw;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-line {
+        width: 60vw;
+        max-width: 500px;
+        height: 2px;
+        background-color: #000;
+        margin: 0px auto;
+    }
+
+    .indexText h1 {
+        font-size: 56px;
+    }
+
+    .indexText h2 {
+        font-size: 42px;
+    }
+
+    .indexText p {
+        font-size: 18px;
+    }
+}

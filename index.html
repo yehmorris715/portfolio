@@ -9,6 +9,9 @@
   <meta name="description" content="我是葉昱辰，擅長排版、攝影、影片剪輯，110年商業類技藝競賽網頁設計第9名，擔任雲科大第33屆攝影社資訊長。">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/indexstyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
@@ -43,27 +46,70 @@
 
   <!-- 內容 -->
   <div class="homebigbox">
-    <div class="homesmallbox">
-      <img src="images/me.png" alt="個人形象照" class="profile-image">
-      <div class="profile-line"></div>
-      <h2 class="profile-name">我是 葉昱辰</h2>
-      <h5 class="profileEnglishName">I'm Morris Yeh.</h5>
-      <section class="introduce">
-        <p class="introduceP">
-          擅長排版、攝影、影片剪輯，<br>
-          110 年商業類技藝競賽網頁設計第 9 名，<br>
-          擔任雲科大第 33 屆攝影社資訊長。
-        </p>
-      </section>
-      <div class="profile-buttons">
-        <button class="btn btnstyle" onclick="window.open('images/履歷.pdf')">簡歷下載</button>
-        <button class="btn btnstyle" onclick="window.location.href='aboutme.html'">我的經歷</button>
-        <button class="btn btnstyle" onclick="window.location.href='work.html'">作品專區</button>
+    <div class="container">
+      <div class="row indexRow">
+        <div class="col indexLeft">
+          <div class="indexInside">
+            <img src="images/me.png" alt="個人形象照" class="profile-image">
+            <div class="profile-line"></div>
+          </div>
+        </div>
+        <div class="col rindexRight">
+          <div class="indexInside">
+            <section class="indexText">
+              <h1>
+                <span>我</span><span>是</span> <span>葉</span><span>昱</span><span>辰</span>
+              </h1>
+
+              <h2><span>I'm</span> <span>Morris</span> <span>Yeh</span><span>.</span></h2>
+
+              <p>擅長排版、攝影、影片剪輯，<br>110 年商業類技藝競賽網頁設計第 9 名，<br>擔任雲科大第 33 屆攝影社資訊長。</p>
+              <div class="profile-buttons">
+                <button class="btn btnstyle" onclick="window.open('images/履歷.pdf')">簡歷下載</button>
+                <button class="btn btnstyle" onclick="window.location.href='aboutme.html'">我的經歷</button>
+                <button class="btn btnstyle" onclick="window.location.href='work.html'">作品專區</button>
+              </div>
+              
+            </section><p style="opacity: 10%; color: white;">v 2.0</p>
+          </div>
+        </div>
       </div>
-      <p style="color: white;">v 1.2.2</p>
     </div>
   </div>
   </div>
+
+  <script>
+    // 讓 GSAP 監聽 DOM
+    document.addEventListener("DOMContentLoaded", () => {
+      // indexLeft 動畫
+      gsap.timeline()
+        .fromTo(".profile-line",
+          { scaleY: 0, transformOrigin: "bottom center" },
+          { scaleY: 1, duration: 0.8, ease: "power3.out" }
+        )
+        .fromTo(".profile-image",
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, "<");
+
+      // indexRight 動畫
+      const indexRightTl = gsap.timeline({ delay: 0.5 });
+      indexRightTl.fromTo(".indexText h1 span",
+        { y: "100%", opacity: 0 },
+        { y: "0%", opacity: 1, duration: 0.4, stagger: 0.12, ease: "power3.out" }
+      )
+        .fromTo(".indexText h2 span",
+          { y: "100%", opacity: 0 },
+          { y: "0%", opacity: 1, duration: 0.4, stagger: 0.12, ease: "power3.out" }, "-=0.3")
+        .fromTo(".indexText p",
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, "-=0.2")
+        .fromTo(".profile-buttons button",
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.4, stagger: 0.12, ease: "power3.out" }, "-=0.2");
+    });
+  </script>
+
+
 
   <!-- Footer  -->
   <footer>
