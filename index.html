@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/indexstyle.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
@@ -20,10 +21,21 @@
 </head>
 
 <body>
+  <!-- 過場動畫 -->
+  <div id="preloader">
+    <div id="loader">
+      <img src="images/icon/logo.svg" alt="Logo" class="preloader-logo">
+      <div class="progress-text">0 %</div>
+    </div>
+  </div>
+
   <!-- Navbar 開頭 -->
   <nav class="navbar navbar-expand-lg navsetting">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="images/icon/logo.svg" alt="個人Logo" class="logo"></a>
+      <a class="navbar-brand" href="index.html?skipPreloader=true" 
+       onclick="sessionStorage.setItem('fromNavbar', 'true')">
+      <img src="images/icon/logo.svg" alt="個人Logo" class="logo">
+    </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -69,8 +81,9 @@
                 <button class="btn btnstyle" onclick="window.location.href='aboutme.html'">我的經歷</button>
                 <button class="btn btnstyle" onclick="window.location.href='work.html'">作品專區</button>
               </div>
-              
-            </section><p style="opacity: 10%; color: white;">v 2.1</p>
+
+            </section>
+            <p style="opacity: 10%; color: white;">v 2.2</p>
           </div>
         </div>
       </div>
@@ -79,8 +92,76 @@
   </div>
 
   <script>
-    // 讓 GSAP 監聽 DOM
     document.addEventListener("DOMContentLoaded", () => {
+      const preloader = document.getElementById("preloader");
+      const progressText = document.querySelector(".progress-text");
+  
+      // 檢查 localStorage 是否已存訪問標記
+      const hasVisited = localStorage.getItem("hasVisited");
+  
+      // 檢查 URL 是否有跳過過場動畫的參數
+      const urlParams = new URLSearchParams(window.location.search);
+      const skipPreloader = urlParams.get("skipPreloader") === "true";
+  
+      // 確定是否從內部導航刷新
+      const fromInternalNavigation = sessionStorage.getItem("fromNavbar");
+  
+      if (skipPreloader) {
+        // 如果有跳過動畫參數，移除參數
+        urlParams.delete("skipPreloader");
+        const newUrl = window.location.origin + window.location.pathname + (urlParams.toString() ? `?${urlParams}` : "");
+        window.history.replaceState({}, document.title, newUrl); // 更新網址，不刷新頁面
+      }
+  
+      if (!hasVisited) {
+        // 情境 1: 首次訪問
+        localStorage.setItem("hasVisited", "true"); // 設置訪問標記
+        startPreloader(preloader, progressText);
+      } else if (fromInternalNavigation) {
+        // 情境 2: 從 Navbar 返回首頁，跳過動畫
+        sessionStorage.removeItem("fromNavbar"); // 清除標記
+        preloader.style.display = "none";
+        startGSAPAnimations();
+      } else {
+        // 情境 3: 手動刷新首頁
+        resetPreloader(preloader, progressText);
+        startPreloader(preloader, progressText);
+      }
+    });
+  
+    // 初始化進度條狀態
+    function resetPreloader(preloader, progressText) {
+      preloader.style.display = "flex"; // 確保顯示過場動畫
+      preloader.style.opacity = "1";
+      progressText.textContent = "0%"; // 初始化數字
+    }
+  
+    // 過場動畫邏輯
+    function startPreloader(preloader, progressText) {
+      let progress = 0;
+  
+      const interval = setInterval(() => {
+        progress += 1;
+        progressText.textContent = `${progress}%`;
+  
+        if (progress >= 100) {
+          clearInterval(interval);
+  
+          // 過場動畫完成後隱藏
+          preloader.style.opacity = "0";
+          preloader.style.pointerEvents = "none";
+  
+          setTimeout(() => {
+            preloader.style.display = "none";
+  
+            // 開始 GSAP 動畫
+            startGSAPAnimations();
+          }, 8); // 等待淡出動畫完成
+        }
+      }, 7); // 每次更新間隔
+    }
+  
+    function startGSAPAnimations() {
       // indexLeft 動畫
       gsap.timeline()
         .fromTo(".profile-line",
@@ -90,7 +171,7 @@
         .fromTo(".profile-image",
           { y: 100, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, "<");
-
+  
       // indexRight 動畫
       const indexRightTl = gsap.timeline({ delay: 0.5 });
       indexRightTl.fromTo(".indexText h1 span",
@@ -106,10 +187,8 @@
         .fromTo(".profile-buttons button",
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.4, stagger: 0.12, ease: "power3.out" }, "-=0.2");
-    });
-  </script>
-
-
+    }
+  </script>  
 
   <!-- Footer  -->
   <footer>
