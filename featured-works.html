@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/favicon.ico" rel="shortcut icon" />
+    <title>精選作品 | 葉昱辰個人形象網</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color_v3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar 開頭 -->
+    <nav class="navbar navbar-expand-lg navsetting">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html?skipPreloader=true" 
+         onclick="sessionStorage.setItem('fromNavbar', 'true')">
+        <img src="images/icon/logo.svg" alt="個人Logo" class="logo">
+      </a>
+  
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="aboutme.html">我的經歷</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              我的作品
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="featured-works.html">精選作品</a></li>
+              <li><a class="dropdown-item" href="uidesign.html">介面設計</a></li>
+              <li><a class="dropdown-item" href="photography.html">攝影 & 媒體</a></li>
+              <li><a class="dropdown-item" href="design.html">設計作品</a></li>
+              <li><a class="dropdown-item" href="otherdesign.html">多元類別</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">與我聯絡</a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body text-start">
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html">我的經歷</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                我的作品
+              </a>
+              <ul class="dropdown-menu text-start">
+                <li><a class="dropdown-item active" href="featured-works.html">精選作品</a></li>
+                <li><a class="dropdown-item" href="uidesign.html">介面設計</a></li>
+                <li><a class="dropdown-item" href="photography.html">攝影 & 媒體</a></li>
+                <li><a class="dropdown-item" href="design.html">設計作品</a></li>
+                <li><a class="dropdown-item" href="otherdesign.html">多元類別</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">與我聯絡</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- 內容 -->
+    <div class="homebigbox">
+        <div class="container workInBox">
+            <div class="title">
+                <a onclick="history.back()" class="btnBack">
+                    <img src="images/icon/back.svg" alt="" class="backImg">
+                </a>
+                <h2 class="pageTitle">精選作品</h2>
+            </div>
+
+            <hr class="smallTitleHr">
+            <div class="row workInRow">
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="ui-silver-star-voyagers.html">
+                        <img src="images/介面設計/Silver Star Voyagers/silver star voyagers.webp" alt=""
+                            class="linkBoxPhoto">
+                        <div class="overlay">未來星艦簡介網</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="ui-my-website.html">
+                        <img src="images/介面設計/My Website/my website.webp" alt="" class="linkBoxPhoto">
+                        <div class="overlay">2024 葉昱辰個人形象網</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="photo-waiting.html">
+                        <img src="images/攝影 & 媒體/攝影/縮圖/5V7A6960.webp" alt="候車" class="imgBoxPhoto">
+                        <div class="overlay">候車</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="photo-portrait.html">
+                        <img src="images/攝影 & 媒體/攝影/縮圖/MG_5303.webp" alt="人像攝影" class="imgBoxPhoto">
+                        <div class="overlay">人像攝影</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="video-iidvisit.html">
+                        <img src="images/攝影 & 媒體/影片/新一代/新一代縮圖.webp" alt="移地教學紀錄片" class="imgBoxPhoto">
+                        <div class="overlay">移地教學紀錄片</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="video-yuntech-photoclub-rewind.html">
+                        <img src="images/攝影 & 媒體/影片/攝影社 回顧/Christmas.webp" alt="時光閃回・學期點滴" class="imgBoxPhoto">
+                        <div class="overlay">時光閃回・學期點滴</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="design-taiwandeer.html">
+                        <img src="images/設計作品/台灣梅花鹿/IMG_9377.webp" alt="立體拼圖 - 台灣梅花鹿" class="imgBoxPhoto">
+                        <div class="overlay">立體拼圖 - 台灣梅花鹿</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="design-oreo.html">
+                        <img src="images/設計作品/Oreo 專題攝影/oreo.webp" alt="專題攝影 - Oreo 廣告拍攝" class="imgBoxPhoto">
+                        <div class="overlay">專題攝影 - Oreo 廣告拍攝</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="design-magazine.html">
+                        <img src="images/設計作品/雜誌封面/crazy.webp" alt="專題攝影 - Oreo 廣告拍攝" class="imgBoxPhoto">
+                        <div class="overlay">雜誌封面設計</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="other-teaching-programs.html">
+                        <img src="images/多元類別/石龜/teach_link_picture.webp" alt="" class="imgBoxPhoto">
+                        <div class="overlay">社區小學教案製作</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="other-insomnia.html">
+                        <img src="images/多元類別/失眠通報/sleep.webp" alt="" class="imgBoxPhoto">
+                        <div class="overlay">失眠通報</div>
+                    </a>
+                </div>
+                <div class="workInColbox col-12">
+                    <a class="linkbox" href="other-route_map.html">
+                        <img src="images/多元類別/廣福宮/route_map.webp" alt="" class="imgBoxPhoto">
+                        <div class="overlay">廣福宮 動線指引改造</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    <footer>
+        <div class="footer">
+            <small>版權所有 © 2024 葉昱辰 個人形象網</small>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

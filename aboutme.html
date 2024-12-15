@@ -8,8 +8,8 @@
   <title>我的經歷 | 葉昱辰個人形象網</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/color_v3.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
@@ -21,34 +21,75 @@
   <nav class="navbar navbar-expand-lg navsetting">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html?skipPreloader=true" 
-       onclick="sessionStorage.setItem('fromNavbar', 'true')">
-      <img src="images/icon/logo.svg" alt="個人Logo" class="logo">
-    </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         onclick="sessionStorage.setItem('fromNavbar', 'true')">
+        <img src="images/icon/logo.svg" alt="個人Logo" class="logo">
+      </a>
+  
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+      <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="aboutme.html">我的經歷</a>
+            <a class="nav-link active" href="aboutme.html">我的經歷</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              我的作品
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="featured-works.html">精選作品</a></li>
+              <li><a class="dropdown-item" href="uidesign.html">介面設計</a></li>
+              <li><a class="dropdown-item" href="photography.html">攝影 & 媒體</a></li>
+              <li><a class="dropdown-item" href="design.html">設計作品</a></li>
+              <li><a class="dropdown-item" href="otherdesign.html">多元類別</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="work.html">作品專區</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-disabled="true" href="contact.html">與我聯絡</a>
+            <a class="nav-link" href="contact.html">與我聯絡</a>
           </li>
         </ul>
       </div>
+  
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body text-start">
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="aboutme.html">我的經歷</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                我的作品
+              </a>
+              <ul class="dropdown-menu text-start">
+                <li><a class="dropdown-item" href="featured-works.html">精選作品</a></li>
+                <li><a class="dropdown-item" href="uidesign.html">介面設計</a></li>
+                <li><a class="dropdown-item" href="photography.html">攝影 & 媒體</a></li>
+                <li><a class="dropdown-item" href="design.html">設計作品</a></li>
+                <li><a class="dropdown-item" href="otherdesign.html">多元類別</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">與我聯絡</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
+  
 
   <!-- 內容 -->
   <div class="homebigbox">
     <div class="container aboutMeBox">
       <div class="title">
-        <h2 style="color: rgb(25, 25, 220);" class="aboutmeTitle">學歷</h2>
+        <h2 style="color: #4e3c22;" class="aboutmeTitle">學歷</h2>
       </div>
       <hr class="titleHr">
       <div class="textbox">
@@ -61,7 +102,7 @@
         <h5>廣告設計科</h5>
       </div>
       <div class="title" style="margin-top: 60px;">
-        <h2 style="color: rgb(25, 25, 220);" class="aboutmeTitle">實務經歷</h2>
+        <h2 style="color: #4e3c22;" class="aboutmeTitle">實務經歷</h2>
       </div>
       <hr class="titleHr">
       
@@ -134,7 +175,7 @@
       </div>
 
       <div class="title" style="margin-top: 60px;">
-        <h2 style="color: rgb(25, 25, 220);">得獎紀錄</h2>
+        <h2 style="color: #4e3c22;">得獎紀錄</h2>
       </div>
       <hr class="titleHr">
       <div class="colStyle">
@@ -152,7 +193,7 @@
         </p>
       </div>
       <div class="title" style="margin-top: 60px;">
-        <h2 style="color: rgb(25, 25, 220);">專業技能</h2>
+        <h2 style="color: #4e3c22;">專業技能</h2>
       </div>
       <hr class="titleHr">
       <h3 class="aboutMeSmallTitle">專業證照</h3>
@@ -210,7 +251,7 @@
       </div>
 
       <div class="title" style="margin-top: 60px;">
-        <h2 style="color: rgb(25, 25, 220);">工讀經歷</h2>
+        <h2 style="color: #4e3c22;">工讀經歷</h2>
       </div>
       <hr class="titleHr">
       <div class="textbox">

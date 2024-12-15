@@ -1,52 +1,3 @@
-/* 暖色漸層 */
-body,
-html {
-    margin: 0;
-    height: 100%;
-    font-family: "Noto Sans TC", sans-serif;
-    background: linear-gradient(120deg, #ffcece, #ffdac4, #ffe4b9, #fffeaf);
-    background-size: 400% 1500%;
-    animation: gradientFlow 4s ease-in-out infinite;
-}
-
-/* 深藍色背景 */
-/* body,
-html {
-    margin: 0;
-    height: 100%;
-    font-family: "Noto Sans TC", sans-serif;
-    background-color: rgba(14, 16, 15);
-} */
-
-/* 深色漸層 */
-/* body,
-html {
-    margin: 0;
-    height: 100%;
-    font-family: "Noto Sans TC", sans-serif;
-    background: linear-gradient(120deg, #131a21, #34495e);
-    background-size: 400% 1000%;
-    animation: gradientFlow 4s ease-in-out infinite;
-} */
-
-@keyframes gradientFlow {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.navsetting {
-    background-color: #ffd277;
-}
-
 .logo {
     width: 30px;
 }
@@ -54,6 +5,33 @@ html {
 .active {
     font-weight: 600;
 }
+
+/* 僅限手機版樣式 */
+@media (max-width: 991px) {
+
+    /* 修改 dropdown-menu 樣式 */
+    .dropdown-menu {
+      background-color: transparent; /* 移除背景色 */
+      border: none; /* 移除邊框 */
+      box-shadow: none; /* 移除陰影 */
+    }
+
+    .dropdown-menu:hover {
+        background-color: transparent; /* 移除背景色 */
+        border: none; /* 移除邊框 */
+      }
+
+      .offcanvas-body .navbar-nav .nav-item {
+        margin-bottom: 15px; /* 調整每個項目的間距，數值可自行調整 */
+      }
+}
+
+@media (max-width: 576px) {
+    /* 針對超小螢幕的調整 */
+    .offcanvas.offcanvas-end {
+      width: 70%; /* 手機螢幕改為 70% 寬度 */
+    }
+  }
 
 @media (max-width: 991px) {
     .navbar-collapse {
@@ -200,19 +178,6 @@ html {
     padding-top: 10px;
 }
 
-.btnstyle {
-    border-radius: 100px;
-    border: solid #FFCB66;
-    color: #362525;
-    background-color: #fff;
-}
-
-.btnstyle:hover {
-    background-color: #FFCB66;
-    border: solid white;
-    transition: 0.5s;
-}
-
 .profile-buttons .btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -223,7 +188,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f3f3f3;
     flex-shrink: 0;
 }
 
@@ -251,7 +215,7 @@ h6 {
     }
 }
 
-/* 關於我 */
+/* 我的經歷 */
 .title {
     display: flex;
     justify-content: center;
@@ -260,14 +224,12 @@ h6 {
 }
 
 .aboutMeBox {
-    background-color: #fff;
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 15px;
     padding-right: 15px;
     width: 90vw;
     max-width: 1344px;
-    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -289,6 +251,7 @@ h6 {
 }
 
 .aboutMeSmallTitle {
+    color: #3E3A39;
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
@@ -506,14 +469,12 @@ h6 {
 }
 
 .workInBox {
-    background-color: #fff;
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 15px;
     padding-right: 15px;
     width: 90vw;
     max-width: 1344px;
-    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -533,7 +494,6 @@ h6 {
     height: 25vh;
     border-radius: 1rem;
     margin: 20px;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -648,14 +608,12 @@ h6 {
 }
 
 .projectInBox {
-    background-color: #fff;
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 15px;
     padding-right: 15px;
     width: 90vw;
     max-width: 1344px;
-    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -802,18 +760,4 @@ h6 {
     .backImg {
         width: 28px;
     }
-}
-
-.canva {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: 56.2500%;
-    padding-bottom: 0;
-    box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
-    margin-top: 1.6em;
-    margin-bottom: 0.9em;
-    overflow: hidden;
-    border-radius: 8px;
-    will-change: transform;
 }

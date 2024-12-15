@@ -13,7 +13,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffe4b9;
+    background: #EAD8C0;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ body {
 
 .progress-text {
     font-size: 24px;
-    color: #4C2107;
+    color: #4e3c22;
     font-family: "Audiowide", sans-serif;
 }
 
@@ -122,7 +122,7 @@ body {
     width: 60vw;
     max-width: 550px;
     height: 2px;
-    background-color: #000;
+    background-color: #4e3c22;
     color: rgba(255, 252, 225);
     margin: 0px auto;
 }
@@ -206,7 +206,7 @@ body {
         width: 70vw;
         max-width: 600px;
         height: 2px;
-        background-color: #000;
+        background-color: #4e3c22;
         margin: 0px auto;
     }
 
@@ -239,7 +239,7 @@ body {
         width: 65vw;
         max-width: 550px;
         height: 2px;
-        background-color: #000;
+        background-color: #4e3c22;
         margin: 0px auto;
     }
 
@@ -270,7 +270,7 @@ body {
         width: 65vw;
         max-width: 600px;
         height: 2px;
-        background-color: #000;
+        background-color: #4e3c22;
         margin: 0px auto;
     }
 
@@ -301,7 +301,7 @@ body {
         width: 60vw;
         max-width: 500px;
         height: 2px;
-        background-color: #000;
+        background-color: #4e3c22;
         margin: 0px auto;
     }
 

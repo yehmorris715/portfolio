@@ -1,0 +1,73 @@
+/* Version Beta */
+
+/* 背景 */
+body,
+html {
+    margin: 0;
+    height: 100%;
+    font-family: "Noto Sans TC", sans-serif;
+    background-color: #FFF2E1;
+}
+
+.navsetting {
+    background-color: #EAD8C0;
+}
+
+.offcanvas-header {
+    background-color: #FFF2E1;
+}
+
+.offcanvas-body {
+    background-color: #FFF2E1;
+}
+
+.btnstyle {
+    border-radius: 100px;
+    border: solid #DEBB91;
+    color: #362525;
+    background-color: #fff;
+}
+
+.btnstyle:hover {
+    background-color: #EAD8C0;
+    border: solid #A79277;
+    transition: 0.5s;
+}
+
+.name {
+    color: #4e3c22;
+}
+
+.index_p {
+    color: #3E3A39;
+}
+
+.footer {
+    background-color: #f6e6d1;
+}
+
+/* 我的經歷 */
+.aboutMeBox {
+    background-color: #fff;
+    border: solid 2px rgb(155, 155, 155);
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 選擇作品 */
+.workInBox {
+    background-color: #fff;
+    border: solid 2px rgb(155, 155, 155);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 作品頁面 */
+.projectInBox {
+    background-color: #fff;
+    border: solid 2px rgb(155, 155, 155);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+.pageTitle {
+    color: #4e3c22;
+}
